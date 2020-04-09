@@ -54,7 +54,7 @@ void SqlSynchronize::synchronizeTables(const QStringList &tables)
     int count = tables.count();
     foreach (QString synTable, tables) {
         synchronizeTable(synTable);
-        emit progressStatus(i + 1,count);
+        emit progressStatus(++i,count);
     }
 
 }
